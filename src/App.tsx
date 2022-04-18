@@ -48,7 +48,7 @@ const App = () => {
         options={{height: 400, width: 600}}
       />
       <h3 style={{marginBottom: "3%"}} className="please-text">Want to say more? <span className="hover2" style={{textDecoration: 'underline'}} onClick={() => {window.open('https://miladymaker.net/')}}>Please be patient with me</span></h3>
-      <h4 style={{marginBottom: "3%"}} className="please-text"><span className="hover2" style={{textDecoration: 'underline'}} onClick={() => {window.open('https://cheese.game/')}}>Made with ❤️ by 🧀</span></h4>
+      <h4 className="please-text"><span className="hover2" style={{textDecoration: 'underline'}} onClick={() => {window.open('https://cheese.game/')}}>Made with ❤️ by 🧀</span></h4>
     </Wrapper>
   );
 };
