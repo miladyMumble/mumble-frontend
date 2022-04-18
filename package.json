@@ -1,0 +1,92 @@
+{
+  "name": "@ydstarters/parcel-starter-tw-wallet",
+  "version": "1.0.3",
+  "description": "tailwind starter using parcel, tailwind and twin.macro with wallet connection supporting ethereum",
+  "main": "index.js",
+  "bin": "./.bin/cli.js",
+  "targets": {
+    "main": false
+  },
+  "scripts": {
+    "clean": "shx rm -rf dist .parcel-cache",
+    "build": "yarn clean && parcel build public/index.html",
+    "start": "yarn clean && parcel public/index.html",
+    "fmt": "prettier --write '{*,**/*}.{js,ts,jsx,tsx,json}'",
+    "lint": "eslint . && prettier --check '{*,**/*}.{js,ts,jsx,tsx,json}'",
+    "lint:fix": "eslint --fix . && yarn fmt",
+    "nuke": "shx rm -rf node_modules yarn.lock"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [],
+  "author": "Cheezboys",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/parcel-starter-tw-wallet/issues"
+  },
+  "homepage": "https://github.com/parcel-starter-tw-wallet#readme",
+  "dependencies": {
+    "@babel/core": "^7.16.10",
+    "@emotion/react": "^11.9.0",
+    "@emotion/styled": "^11.8.1",
+    "@mui/material": "^5.6.1",
+    "@walletconnect/web3-provider": "^1.7.1",
+    "axios": "^0.26.1",
+    "ethers": "^5.6.4",
+    "ethers-multicall": "^0.2.3",
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0",
+    "react-icons": "^4.3.1",
+    "react-toastify": "^8.1.1",
+    "react-twitter-embed": "^4.0.4",
+    "styled-components": "^5.3.3",
+    "tailwindcss": "^3.0.15",
+    "twin.macro": "^2.8.2",
+    "web3": "^1.7.0",
+    "web3modal": "^1.9.5",
+    "yarn": "^1.22.18"
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-react-jsx": "^7.16.7",
+    "@parcel/packager-raw-url": "^2.2.1",
+    "@parcel/transformer-webmanifest": "^2.2.1",
+    "@types/eslint": "^8.2.2",
+    "@types/eslint-plugin-prettier": "^3.1.0",
+    "@types/node": "^16.11.14",
+    "@types/prettier": "^2.4.3",
+    "@types/react": "^17.0.38",
+    "@types/react-dom": "^17.0.11",
+    "@types/styled-components": "^5.1.21",
+    "@typescript-eslint/eslint-plugin": "^5.9.1",
+    "@typescript-eslint/parser": "^5.9.1",
+    "assert": "^2.0.0",
+    "babel-plugin-styled-components": "^2.0.2",
+    "babel-plugin-twin": "^1.0.2",
+    "constants-browserify": "^1.0.0",
+    "eslint": "^8.6.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "https-browserify": "^1.0.0",
+    "os-browserify": "^0.3.0",
+    "parcel": "^2.2.0",
+    "path-browserify": "^1.0.1",
+    "prettier": "^2.5.1",
+    "querystring-es3": "^0.2.1",
+    "shx": "^0.3.4",
+    "stream-browserify": "^3.0.0",
+    "stream-http": "^3.2.0",
+    "tslib": "^2.3.1",
+    "typescript": "^4.5.4",
+    "url": "^0.11.0"
+  },
+  "babelMacros": {
+    "twin": {
+      "preset": "styled-components",
+      "autoCssProp": false
+    }
+  }
+}

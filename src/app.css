@@ -1,0 +1,17 @@
+.hover2:hover {
+    cursor: pointer;
+}
+
+.please-text {
+    margin: 0 auto;
+    color: black;
+    text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+
+    .please-text {
+        font-size: 18px;
+    }
+
+}
