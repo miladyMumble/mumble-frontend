@@ -1,3 +1,28 @@
+.m_box {
+    border: 1px solid #2f4d0c;
+    margin: 1em;
+    background-color: white;
+    max-width: 650px;
+}
+
+.m_box_bar {
+    background: #2f4d0c;
+    color: white;
+}
+
+.box_h2 {
+    margin-top: 0.001em !important;
+    margin-bottom: 0.001em !important;
+    margin-left: 0.25em !important;
+    font-size: 1.1em !important;
+}
+
+p {
+    margin: 0.5em !important;
+    margin-left: 1em !important;
+    color: black;
+}
+
 .hover2:hover {
     cursor: pointer;
 }

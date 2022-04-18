@@ -27,8 +27,7 @@ const App = () => {
     <Wrapper style={{background: 'linear-gradient(#d9f0d6, #f4ffee, #f4ffee, white, white)'}}>
       <ToastContainer position='bottom-right' theme={'dark'} />
       <Navbar />
-      <audio src="https://miladymaker.net/mp3/ost.mp3" controls />
-      <div style={{marginTop: '1.5%'}}>
+      <div>
       {state.connected && (
         <div>
           {/* <div style={{paddingTop: '2%', paddingBottom: '1%', border: '1px solid red'}}>
