@@ -1,0 +1,419 @@
+html,
+body,
+#app {
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  box-sizing: border-box;
+  padding: 0 15%;
+}
+
+/* Milady DAO Header */
+h1 {
+  font-family: "VT323", monospace;
+  text-align: center;
+  font-size: 70px;
+  font-weight: bold;
+  margin-bottom: -250px;
+}
+
+#pfp {
+  justify-content: left;
+  margin-right: 3rem;
+  /* margin-left: 3rem; */
+}
+
+#credit {
+  font-family: "VT323", monospace;
+  display: flex;
+  justify-content: right;
+  margin-right: -325px;
+  margin-left: 600px;
+  margin-top: 150px;
+  margin-bottom: 200px;
+}
+
+#credit,
+#credit:visited,
+#credit:hover,
+#credit:active {
+  text-decoration: none;
+  color: pink;
+}
+
+#feed {
+  display: flex;
+  margin-top: 50px;
+  justify-content: center;
+}
+
+/* Logo */
+#logo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 425px;
+  justify-content: left;
+  margin-top: 20px;
+  /* display: flex; */
+}
+
+/* Website Body */
+body {
+  background: linear-gradient(177deg, black, rgb(46, 17, 37), #000000, black);
+  background-size: 600% 600%;
+  background-attachment: fixed;
+  -webkit-animation: gradiate 30s ease infinite;
+  -moz-animation: gradiate 30s ease infinite;
+  animation: gradiate 30s ease infinite;
+  color: #a9c0cf;
+  background-color: black;
+  background-size: 600% 600%;
+  background-attachment: fixed;
+  overscroll-behavior-y: none;
+  color: green;
+}
+
+#sea {
+  margin-left: -250px;
+  margin-top: -90px;
+}
+
+
+#lain {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 200px;
+  justify-content: left;
+  margin-top: 20px;
+  display: flex;
+}
+
+#balance {
+  font-family: "VT323", monospace;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+#opensea {
+  font-family: "VT323", monospace;
+  /* display: inline-flex; */
+  justify-content: left;
+  text-align: left;
+  font-size: 80px;
+  font-weight: bold;
+  margin-top: 35px;
+}
+
+#app {
+  display: grid;
+  grid-template-columns: 2fr 3fr 2fr;
+  grid-template-rows: auto auto auto auto auto 1fr;
+  font-family: "VT323", monospace;
+}
+
+.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+.hide {
+  visibility: hidden;
+  opacity: 0;
+}
+
+#headerBox {
+  margin: 2em;
+  padding: 0.25em;
+
+  display: flex;
+  justify-content: center;
+  color: green;
+  grid-row: 1;
+  grid-column: 2;
+  text-align: center;
+  max-height: 100%;
+}
+
+/* Tweet Box */
+#tweetBox {
+  font-family: "VT323", monospace;
+  font-size: 30px;
+  justify-content: center;
+  font-weight: bold;
+  color: inherit;
+  margin-bottom: 40px;
+  margin-top: -50px;
+  resize: none;
+  box-sizing: border-box;
+  width: 100%;
+  background: rgba(34, 46, 62, 0.4);
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
+  box-shadow: 15px 15px 50px rgb(34 46 62 / 50%);
+  border: 2px solid #a9b3c9;
+  border-radius: 10px;
+  padding: 10px;
+  overflow-y: hidden;
+}
+
+#tweetBox {
+  grid-column: 2;
+  display: flex;
+  width: 100%;
+}
+
+#tweetBox {
+  box-sizing: border-box;
+  width: 100%;
+}
+
+#tweetBox:focus,
+input:focus {
+  outline: none;
+}
+
+#tweetBox {
+  grid-column: 2;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#tweetBox {
+  grid-column: 2;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Tweet It Button  */
+#tweet {
+  font-family: "VT323", monospace;
+  float: right;
+  font-weight: bold;
+  font-size: 25px;
+  background-color: rgba(34, 46, 62, 0.4);
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  text-decoration: none;
+  /* justify-content: center; */
+  margin-right: 500px;
+  margin-top: -80px;
+}
+
+#main {
+  margin-bottom: 500px;
+}
+
+#os {
+  border: 2px solid pink;
+}
+
+#tweet:hover {
+  background: blue;
+  transition: 0.3s;
+  color: white;
+}
+
+/* Connect Metamask Button */
+#connect {
+  font-family: "VT323", monospace;
+  float: right;
+  font-size: 30px;
+  padding: 100px;
+  margin: 30px;
+  font-weight: bold;
+  background-color: green;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+#connect:hover {
+  background: blue;
+  transition: 0.3s;
+  color: white;
+}
+
+h1:hover,
+h2:hover {
+  animation: quickBlur 0.25s ease;
+  cursor: pointer;
+}
+*/ .tweet:hover {
+  background: rgba(15, 24, 34, 0.6);
+  transition: 0.3s;
+}
+
+.line {
+  background: #c9a9a9;
+  pointer-events: none;
+  height: 2px;
+  width: 30px;
+  display: block;
+  margin-bottom: 7px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.line-before {
+  width: 16.5px;
+  transition: all 0.2s linear;
+}
+
+.line-right-before {
+  float: right;
+}
+
+.change .line-left {
+  -webkit-transform: rotate(-45deg) translate(-6px, 6px);
+  transform: rotate(-45deg) translate(-6px, 6px);
+}
+
+.change .line-middle {
+  opacity: 0;
+}
+
+.change .line-right {
+  -webkit-transform: rotate(45deg) translate(-6px, -6px);
+  transform: rotate(45deg) translate(-6px, -6px);
+}
+
+.dark-blue-bg {
+  background: pink;
+}
+
+li {
+  font-size: 1.25rem;
+  color: pink;
+  list-style-type: none;
+  padding: 10px 80px 10px 20px;
+  background: linear-gradient(to left, black 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: 0.5s ease-out;
+  font-family: "VT323", monospace;
+}
+
+li:hover {
+  animation: quickBlur 0.25s ease;
+  color: pink;
+  background-position: left bottom;
+  cursor: pointer;
+}
+
+.li:hover {
+  animation: quickBlur 0.25s ease;
+  color: red;
+}
+
+.cursor {
+  position: fixed;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: transparent;
+  pointer-events: none;
+  mix-blend-mode: difference;
+  z-index: 999;
+  border: red 2px solid;
+  box-shadow: 0 0 20px 0 red;
+  transition: transform 0.2s;
+}
+
+@keyframes blurAnimation {
+  0% {
+    filter: blur(0);
+  }
+  10% {
+    filter: blur(5px);
+  }
+  20%,
+  100% {
+    filter: blur(0);
+  }
+}
+
+@-webkit-keyframes gradiate {
+  0% {
+    background-position: 50% 0%;
+  }
+  50% {
+    background-position: 51% 100%;
+  }
+  100% {
+    background-position: 50% 0%;
+  }
+}
+@-moz-keyframes gradiate {
+  0% {
+    background-position: 50% 0%;
+  }
+  50% {
+    background-position: 51% 100%;
+  }
+  100% {
+    background-position: 50% 0%;
+  }
+}
+@keyframes gradiate {
+  0% {
+    background-position: 50% 0%;
+  }
+  50% {
+    background-position: 51% 100%;
+  }
+  100% {
+    background-position: 50% 0%;
+  }
+}
+
+.line-before {
+  width: 16.5px;
+  transition: all 0.2s linear;
+}
+
+.line-right-before {
+  float: right;
+}
+
+.change .line-left {
+  -webkit-transform: rotate(-45deg) translate(-6px, 6px);
+  transform: rotate(-45deg) translate(-6px, 6px);
+}
+
+.change .line-middle {
+  opacity: 0;
+}
+
+.change .line-right {
+  -webkit-transform: rotate(45deg) translate(-6px, -6px);
+  transform: rotate(45deg) translate(-6px, -6px);
+}
+
+#tweettext {
+  margin: 0px;
+  border-radius: 10px;
+  font-size: 16px;
+  border-color: #cfcfcf;
+  width: 80%;
+  height: 100px;
+  font-family: Avenir;
+  padding: 10px;
+}
+
+.headerBox {
+  display: flex;
+  justify-content: space-around
+}
+
+#pfp {
+  justify-self: center;
+}

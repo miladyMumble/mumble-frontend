@@ -1,56 +1,91 @@
-import React, { useEffect, useState, useContext } from 'react';
-import tw, { styled, css } from 'twin.macro';
+import React, { useEffect, useContext, useState } from 'react';
+import '../public/style.css';
+import WalletConnect from './components/Button/WalletConnect';
 import { WalletContext } from './context/wallet/wallet.context';
-import "./app.css";
-import axios from "axios";
-import { TwitterTimelineEmbed } from 'react-twitter-embed';
-
-import { ToastContainer } from 'react-toastify';
-import Navbar from "./mil-components/Navbar";
 import Message from './mil-components/Message';
 import Mapping from './mil-components/Mapping';
 import SelectedMilady from './mil-components/SelectedMilady';
-import 'react-toastify/dist/ReactToastify.css';
 
-const Wrapper = styled.main`
-  ${tw`w-full min-h-screen px-20 flex flex-col justify-center items-center`}
-`;
 
 const App = () => {
 
-  const { state } = useContext(WalletContext);
+    const { state } = useContext(WalletContext);
+    const tweetTxt = 'Tweet <3';
 
-  const [miladyId, setMiladyId] = useState(null);
-  const [tweet, setTweet] = useState(null);
+    const [miladyId, setMiladyId] = useState(null);
+    const [tweet, setTweet] = useState(null);
 
-  return (
-    <Wrapper style={{background: 'linear-gradient(#d9f0d6, #f4ffee, #f4ffee, white, white)'}}>
-      <ToastContainer position='bottom-right' theme={'dark'} />
-      <Navbar />
-      <div>
-      {state.connected && (
-        <div>
-          {/* <div style={{paddingTop: '2%', paddingBottom: '1%', border: '1px solid red'}}>
-            <Message setTweet={setTweet} />
-          </div> */}
-          <div style={{paddingTop: '2%', paddingBottom: '1%'}}>
-            <SelectedMilady tweet={tweet} setTweet={setTweet} miladyId={miladyId} />
-          </div>
-      </div>
-      )}
-  </div>
-      <div style={{paddingTop: '1%', paddingBottom: '1%'}}>
-        <Mapping setMiladyId={setMiladyId} miladyId={miladyId} />
-      </div>
-      <TwitterTimelineEmbed
-        sourceType="profile"
-        screenName="miladymumble"
-        options={{height: 400, width: 600}}
-      />
-      <h3 style={{marginTop: "1.5%", marginBottom: "1.5%"}} className="please-text">Want to say more? <span className="hover2" style={{textDecoration: 'underline'}} onClick={() => {window.open('https://miladymaker.net/')}}>Please be patient with me</span></h3>
-      <h4 style={{marginBottom: "1.5%"}} className="please-text"><span className="hover2" style={{textDecoration: 'underline'}} onClick={() => {window.open('https://cheese.game/')}}>Made with ❤️ by 🧀</span></h4>
-    </Wrapper>
-  );
-};
+    useEffect(() => {
+        // Append MiladyMumble Timeline Widget At Component Mount
+        const script = document.createElement('script');
+        script.src = "https://platform.twitter.com/widgets.js";
+        script.async = true;
+        document.body.appendChild(script);
+    }, [])
+
+    const handleTweet = (tweet) => {
+        setTweet(tweet);
+    }
+
+    return (
+        <>
+            <div>
+                {state.connected && (
+                    <div>
+                        <div style={{ paddingTop: '2%', paddingBottom: '1%' }}>
+                            <SelectedMilady tweet={tweet} setTweet={setTweet} miladyId={miladyId} />
+                        </div>
+                    </div>
+                )}
+            </div>
+
+            <div id="logo">
+                <img src={require("../public/IMG_8184.png")} />
+            </div>
+
+            <div className='main'>
+                <textarea id="tweetBox" placeholder="Post From @MiladyMumble" onChange={e => handleTweet(e.target.value)}></textarea>
+            </div>
+
+            <div className="headerBox">
+
+                {/* Wallet Button */}
+                <div id="connect"><WalletConnect /></div>
+
+                <div id='tweetButton'>
+                    <a id="tweet" href="#">{tweetTxt}</a>
+                </div>
+
+                <div id="pfp">
+                    <img src={require("../public/988DE5A7-69F5-4B63-B297-1EBCE015C2F2-removebg-preview.png")} />
+                </div>
+
+            </div>
+
+            <div id="lain">
+                <img src={require("../public/lain.gif")} alt="loading" />
+            </div>
+
+            <div style={{ paddingTop: '1%', paddingBottom: '1%' }}>
+                <Mapping setMiladyId={setMiladyId} miladyId={miladyId} />
+            </div>
+
+            <div id="feed">
+                <a className="twitter-timeline" data-width="750" data-height="3000" data-theme="dark" href="https://twitter.com/MiladyMumble?ref_src=twsrc%5Etfw">
+                    Tweets by MiladyMumble
+                </a>
+            </div>
+
+            <div id="sea" >
+                <a href="https://opensea.io/collection/milady"><img style={{ width: "7%" }} src={require("../public/OS.png")} /></a>
+            </div>
+
+        </>
+    )
+}
 
 export default App;
+
+function handleTweet(value: string): void {
+    throw new Error('Function not implemented.');
+}

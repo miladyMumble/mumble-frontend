@@ -2,23 +2,33 @@ import tw, { styled, css } from 'twin.macro';
 
 export const Button = styled.button((props: { wallet?: boolean }) => [
   css`
-    ${tw`block text-sm font-semibold px-5 py-4 text-center transition-all duration-700 hover:shadow-md whitespace-nowrap`}
-    line-height: 1.06rem;
+    font-family: "VT323", monospace;
+    float: right;
+    font-size: 30px;
+    padding: 100px;
+    border: none;
+    margin: 30px;
+    font-weight: bold;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+
     &:hover {
-      box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+      background: blue;
+      transition: 0.3s;
+      color: white;
     }
   `,
 
   props.wallet &&
-    css`
-      background-color: #6b8269;
-      background-size: 400%;
+  css`
+      background-color: green;
       
-
       &:hover {
-        background-size: 200%;
-        background-position: right center;
-        box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+        background: blue;
+        transition: 0.3s;
+        color: white;
       }
     `,
 ]);
