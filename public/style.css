@@ -19,8 +19,6 @@ h1 {
 
 #pfp {
   justify-content: left;
-  margin-right: 3rem;
-  /* margin-left: 3rem; */
 }
 
 #credit {
@@ -407,13 +405,4 @@ li:hover {
   height: 100px;
   font-family: Avenir;
   padding: 10px;
-}
-
-.headerBox {
-  display: flex;
-  justify-content: space-around
-}
-
-#pfp {
-  justify-self: center;
 }

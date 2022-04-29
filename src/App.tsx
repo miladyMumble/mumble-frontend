@@ -50,7 +50,7 @@ const App = () => {
             <div className="headerBox">
 
                 {/* Wallet Button */}
-                <div id="connect"><WalletConnect /></div>
+                <WalletConnect />
 
                 <div id='tweetButton'>
                     <a id="tweet" href="#">{tweetTxt}</a>
