@@ -407,10 +407,3 @@ li:hover {
   padding: 10px;
 }
 
-@media (min-width:320px)  { 
-  /* smartphones, iPhone, portrait 480x320 phones */ 
-  #tweet {
-    margin-right: 0px;
-    margin-top: 30px;
-  }
-}

@@ -15,7 +15,7 @@ const App = () => {
 
     const [miladyId, setMiladyId] = useState(null);
     const [tweet, setTweet] = useState(null);
-    const [previewBox, setPreviewBox] = useState('100%');
+    const [previewBox, setPreviewBox] = useState('.1%');
 
     useEffect(() => {
         // Append MiladyMumble Timeline Widget At Component Mount
@@ -60,10 +60,14 @@ const App = () => {
                     <a id="tweet" href="#">{tweetTxt}</a>
                 </div>
 
-                <div id="pfp" style={{ opacity: previewBox }}>
+                <div id="pfp">
                     <img src={require("../public/988DE5A7-69F5-4B63-B297-1EBCE015C2F2-removebg-preview.png")} />
                 </div>
 
+            </div>
+
+            <div style={{ paddingTop: '1%', paddingBottom: '1%' }}>
+                <Mapping setMiladyId={setMiladyId} miladyId={miladyId} />
             </div>
 
             <div id="lain">
@@ -74,10 +78,6 @@ const App = () => {
                 <a className="twitter-timeline" data-width="750" data-height="3000" data-theme="dark" href="https://twitter.com/MiladyMumble?ref_src=twsrc%5Etfw">
                     Tweets by MiladyMumble
                 </a>
-            </div>
-
-            <div style={{ paddingTop: '1%', paddingBottom: '1%' }}>
-                <Mapping setMiladyId={setMiladyId} miladyId={miladyId} />
             </div>
 
             <div id="sea" >
