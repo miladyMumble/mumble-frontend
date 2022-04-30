@@ -8,6 +8,7 @@ body,
   padding: 0 15%;
 }
 
+/* Milady DAO Header */
 h1 {
   font-family: "VT323", monospace;
   text-align: center;
@@ -134,6 +135,7 @@ body {
   max-height: 100%;
 }
 
+/* Tweet Box */
 #tweetBox {
   font-family: "VT323", monospace;
   font-size: 30px;
@@ -187,6 +189,7 @@ input:focus {
   align-items: center;
 }
 
+/* Tweet It Button  */
 #tweet {
   font-family: "VT323", monospace;
   float: right;
@@ -197,6 +200,7 @@ input:focus {
   padding: 10px;
   border-radius: 10px;
   text-decoration: none;
+  /* justify-content: center; */
   margin-right: 400px;
   margin-top: -80px;
 }
@@ -215,6 +219,7 @@ input:focus {
   color: white;
 }
 
+/* Connect Metamask Button */
 #connect {
   font-family: "VT323", monospace;
   float: right;
@@ -240,7 +245,7 @@ h2:hover {
   animation: quickBlur 0.25s ease;
   cursor: pointer;
 }
-*/ .tweet:hover {
+.tweet:hover {
   background: rgba(15, 24, 34, 0.6);
   transition: 0.3s;
 }
@@ -403,6 +408,7 @@ li:hover {
 }
 
 @media (min-width:320px)  { 
+  /* smartphones, iPhone, portrait 480x320 phones */ 
   #tweet {
     margin-right: 0px;
     margin-top: 30px;
