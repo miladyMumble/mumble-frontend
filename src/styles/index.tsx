@@ -56,5 +56,3 @@ const GlobalStyles = () => (
 );
 
 export default GlobalStyles;
-
-//312e81
