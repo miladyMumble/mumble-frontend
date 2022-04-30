@@ -52,9 +52,9 @@ const App = () => {
                 {/* Wallet Button */}
                 <WalletConnect />
 
-                <div id='tweetButton'>
+                {/* <div id='tweetButton'>
                     <a id="tweet" href="#">{tweetTxt}</a>
-                </div>
+                </div> */}
 
                 <div id="pfp">
                     <img src={require("../public/988DE5A7-69F5-4B63-B297-1EBCE015C2F2-removebg-preview.png")} />
