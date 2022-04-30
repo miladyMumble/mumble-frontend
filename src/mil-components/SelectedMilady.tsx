@@ -5,7 +5,7 @@ import axios from "axios";
 
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { Button } from '../components/Button';
+// import { Button } from '../components/Button';
 import { WalletContext } from '../context/wallet/wallet.context';
 import Grid from "@mui/material/Grid";
 import "./general.css";
@@ -72,7 +72,7 @@ const SelectedMilady = (params, { miladyId, tweet }) => {
 
           {/* Milady tweet button */}
           <div id='tweetButton' style={{ display: 'flex', justifyContent: 'flex-end', marginTop: '2%' }}>
-            <button id="tweet" onClick={signMessage} className="tweet-button" style={{ width: '150px', margin: '0 auto', marginBottom: '3%', marginTop: '2%' }}>{btnTxt}</button>
+            <a id="tweet" onClick={signMessage} className="tweet-button" style={{ width: '150px', margin: '0 auto', marginBottom: '3%', marginTop: '2%' }}>{btnTxt}</a>
           </div>
         </div>
       )}
