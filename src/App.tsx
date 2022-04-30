@@ -41,10 +41,6 @@ const App = () => {
                 )}
             </div>
 
-            <div style={{ paddingTop: '1%', paddingBottom: '1%' }}>
-                <Mapping setMiladyId={setMiladyId} miladyId={miladyId} />
-            </div>
-
             <div id="logo">
                 <img src={require("../public/IMG_8184.png")} />
             </div>
@@ -78,6 +74,10 @@ const App = () => {
                 <a className="twitter-timeline" data-width="750" data-height="3000" data-theme="dark" href="https://twitter.com/MiladyMumble?ref_src=twsrc%5Etfw">
                     Tweets by MiladyMumble
                 </a>
+            </div>
+
+            <div style={{ paddingTop: '1%', paddingBottom: '1%' }}>
+                <Mapping setMiladyId={setMiladyId} miladyId={miladyId} />
             </div>
 
             <div id="sea" >

@@ -52,8 +52,9 @@ const SelectedMilady = (params, { miladyId, tweet }) => {
         {state.connected && params.miladyId != null && (
           <div style={{ marginBottom: '3%' }}>
             <div style={{ marginLeft: '2%', marginRight: '2%', border: '1px solid black', padding: '0px' }}>
-              <h2 style={{ color: 'black', fontSize: '18px', textAlign: 'left', paddingLeft: '2%', marginBottom: '1%', background: '#b9d9b7' }}>Milady #{params.miladyId}</h2>
+              <h2 style={{ fontSize: '18px', textAlign: 'left', paddingLeft: '2%', marginBottom: '1%' }}>Milady #{params.miladyId}</h2>
 
+              {/* Milady image */}
               <div>
                 <img className="hover" style={{ width: '300px', height: '375px', margin: '0 auto' }} src={`https://miladymaker.net/milady/${params.miladyId}.png`} alt="milady token representation" />
               </div>
@@ -69,7 +70,7 @@ const SelectedMilady = (params, { miladyId, tweet }) => {
           </div>
           {/* Milady tweet button */}
           <div id='tweetButton' style={{ display: 'flex', justifyContent: 'flex-end', marginTop: '2%' }}>
-            <button id="tweet" onClick={signMessage} className="tweet-button" style={{ background: '#6b8269', height: '50px', width: '150px', margin: '0 auto', marginBottom: '3%', marginTop: '2%' }}>{btnTxt}</button>
+            <button id="tweet" onClick={signMessage} className="tweet-button" style={{ width: '150px', margin: '0 auto', marginBottom: '3%', marginTop: '2%' }}>{btnTxt}</button>
           </div>
         </div>
       )}

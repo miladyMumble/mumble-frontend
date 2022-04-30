@@ -1,10 +1,10 @@
 .textArea {
-    background: #ededed;
+    /* background: #ededed; */
     max-width: 100%;
-    color: black;
+    /* color: black; */
     height: 100px;
     width: 400px;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     margin-left: 2%;
     padding: 5px;
 }
@@ -19,9 +19,9 @@
 }
 
 .nav-title {
-    color: black;
+    /* color: black;
     font-weight: 600;
-    font-family: Helvetica;
+    font-family: Helvetica; */
     margin-top: 1%;
 }
 
