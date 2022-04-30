@@ -15,7 +15,7 @@ const App = () => {
 
     const [miladyId, setMiladyId] = useState(null);
     const [tweet, setTweet] = useState(null);
-    const [previewBox, setPreviewBox] = useState('.1%');
+    const [previewBox, setPreviewBox] = useState('box');
 
     useEffect(() => {
         // Append MiladyMumble Timeline Widget At Component Mount
@@ -26,7 +26,7 @@ const App = () => {
     }, [])
 
     useEffect(() => {
-        state.connected === true ? setPreviewBox('0%') : setPreviewBox('100%')
+        state.connected === true ? setPreviewBox('none') : setPreviewBox('box')
     }, [state])
 
     return (
@@ -56,7 +56,7 @@ const App = () => {
 
             <div className="headerBox">
 
-                <div id='tweetButton' style={{ opacity: previewBox }}>
+                <div id='tweetButton' style={{ display: previewBox }}>
                     <a id="tweet" href="#">{tweetTxt}</a>
                 </div>
 
