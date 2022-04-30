@@ -10,10 +10,12 @@ import SelectedMilady from './mil-components/SelectedMilady';
 const App = () => {
 
     const { state } = useContext(WalletContext);
+    console.log(state)
     const tweetTxt = 'Tweet <3';
 
     const [miladyId, setMiladyId] = useState(null);
     const [tweet, setTweet] = useState(null);
+    const [previewBox, setPreviewBox] = useState('100%');
 
     useEffect(() => {
         // Append MiladyMumble Timeline Widget At Component Mount
@@ -23,9 +25,9 @@ const App = () => {
         document.body.appendChild(script);
     }, [])
 
-    const handleTweet = (tweet) => {
-        setTweet(tweet);
-    }
+    useEffect(() => {
+        state.connected === true ? setPreviewBox('0%') : setPreviewBox('100%')
+    }, [state])
 
     return (
         <>
@@ -39,24 +41,30 @@ const App = () => {
                 )}
             </div>
 
+            <div style={{ paddingTop: '1%', paddingBottom: '1%' }}>
+                <Mapping setMiladyId={setMiladyId} miladyId={miladyId} />
+            </div>
+
             <div id="logo">
                 <img src={require("../public/IMG_8184.png")} />
             </div>
 
-            <div className='main'>
+            <div className='main' style={{ opacity: previewBox }}>
                 <textarea id="tweetBox" placeholder="Post From @MiladyMumble" onChange={e => handleTweet(e.target.value)}></textarea>
+            </div>
+
+            {/* Wallet Button */}
+            <div>
+                <WalletConnect />
             </div>
 
             <div className="headerBox">
 
-                {/* Wallet Button */}
-                <WalletConnect />
-
-                {/* <div id='tweetButton'>
+                <div id='tweetButton' style={{ opacity: previewBox }}>
                     <a id="tweet" href="#">{tweetTxt}</a>
-                </div> */}
+                </div>
 
-                <div id="pfp">
+                <div id="pfp" style={{ opacity: previewBox }}>
                     <img src={require("../public/988DE5A7-69F5-4B63-B297-1EBCE015C2F2-removebg-preview.png")} />
                 </div>
 
@@ -64,10 +72,6 @@ const App = () => {
 
             <div id="lain">
                 <img src={require("../public/lain.gif")} alt="loading" />
-            </div>
-
-            <div style={{ paddingTop: '1%', paddingBottom: '1%' }}>
-                <Mapping setMiladyId={setMiladyId} miladyId={miladyId} />
             </div>
 
             <div id="feed">
