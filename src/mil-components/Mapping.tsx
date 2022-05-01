@@ -61,7 +61,7 @@ const Mapping = (params, { tweet, miladyId }) => {
             <div className="hover" style={{ border: '1px solid black', padding: '5px' }}>
               <div>
                 <img style={{ width: '100px', height: '125px', margin: '0 auto' }} src={`https://miladymaker.net/milady/${token}.png`} alt="milady token representation" />
-                <h2 style={{ color: 'white', fontWeight: '400', fontSize: '22px', textAlign: 'center' }}>Select Milady</h2>
+                <h2 style={{ color: 'white', fontWeight: '400', fontSize: '22px', textAlign: 'center' }}>Select</h2>
               </div>
             </div>
           </Grid>

@@ -66,7 +66,7 @@ const SelectedMilady = (params, { miladyId, tweet }) => {
         <div>
 
           {/* Milady text box */}
-          <div style={{ width: '100%', margin: '0 auto', display: 'flex', justifyContent: 'center' }}>
+          <div style={{ width: '100%', margin: '0 auto', display: 'flex', justifyContent: 'center', marginTop: '2%' }}>
             <textarea id="tweetBox" maxLength={280} placeholder="Post From @MiladyMumble" onChange={(e) => { params.setTweet(e.target.value) }} required></textarea>
           </div>
 
@@ -74,6 +74,7 @@ const SelectedMilady = (params, { miladyId, tweet }) => {
           <div id='tweetButton' style={{ display: 'flex', justifyContent: 'flex-end', marginTop: '2%' }}>
             <a id="tweet" onClick={signMessage} className="tweet-button" style={{ width: '150px', margin: '0 auto', marginBottom: '3%', marginTop: '2%' }}>{btnTxt}</a>
           </div>
+
         </div>
       )}
     </Wrapper>

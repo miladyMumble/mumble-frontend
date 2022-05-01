@@ -45,7 +45,7 @@ const App = () => {
                 <img src={require("../public/IMG_8184.png")} />
             </div>
 
-            <div className='main' style={{ opacity: previewBox }}>
+            <div className='main' style={{ display: previewBox }}>
                 <textarea id="tweetBox" placeholder="Post From @MiladyMumble" onChange={e => handleTweet(e.target.value)}></textarea>
             </div>
 
