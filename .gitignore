@@ -104,3 +104,8 @@ dist
 .tern-port
 
 .parcel-cache
+
+# fused file reference
+CoolmanApp.tsx
+website.html
+module_code.js

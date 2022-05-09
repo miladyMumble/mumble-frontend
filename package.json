@@ -14,7 +14,8 @@
     "fmt": "prettier --write '{*,**/*}.{js,ts,jsx,tsx,json}'",
     "lint": "eslint . && prettier --check '{*,**/*}.{js,ts,jsx,tsx,json}'",
     "lint:fix": "eslint --fix . && yarn fmt",
-    "nuke": "shx rm -rf node_modules yarn.lock"
+    "nuke": "shx rm -rf node_modules yarn.lock",
+    "postinstall": "patch-package"
   },
   "repository": {
     "type": "git",
@@ -32,10 +33,13 @@
     "@emotion/react": "^11.9.0",
     "@emotion/styled": "^11.8.1",
     "@mui/material": "^5.6.1",
+    "@parcel/transformer-image": "^2.5.0",
     "@walletconnect/web3-provider": "^1.7.1",
     "axios": "^0.26.1",
     "ethers": "^5.6.4",
     "ethers-multicall": "^0.2.3",
+    "patch-package": "^6.4.7",
+    "postinstall-postinstall": "^2.1.0",
     "react": "^17.0.0",
     "react-dom": "^17.0.0",
     "react-icons": "^4.3.1",
