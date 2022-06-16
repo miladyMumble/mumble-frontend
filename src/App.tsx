@@ -46,7 +46,7 @@ const App = () => {
             </div>
 
             <div className='main' style={{ display: previewBox }}>
-                <textarea id="tweetBox" placeholder="Post From @MiladyMumble" onChange={e => handleTweet(e.target.value)}></textarea>
+                <textarea disabled id="tweetBox" placeholder="Post From @MiladyMumble" onChange={e => handleTweet(e.target.value)}></textarea>
             </div>
 
             {/* Wallet Button */}
